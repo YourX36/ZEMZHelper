@@ -1,8 +1,10 @@
 package com.example.zemzhelper.model.entities
 
 data class Detail(
+    val id : Int,
     var sketch : Int?,
     var steel : String,
+    var detailName: String,
     var numberDrawing : String?,
     var quantityPerModule : Int,
     var steelType: SteelType,
@@ -10,7 +12,8 @@ data class Detail(
     var diameter: Double?,
     var pipeDiameter: PipeDiameter?,
     var drawing : String?,
-    var module: Module
+    var module: Module,
+    var logisticsPoints: String?
 )
 
 enum class SteelType {

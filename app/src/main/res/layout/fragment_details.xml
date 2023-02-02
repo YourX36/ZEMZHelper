@@ -11,8 +11,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="30dp" />
 
-    <ListView
-        android:id="@+id/lvDetails"
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+        android:id="@+id/rvDetails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="30dp" />
