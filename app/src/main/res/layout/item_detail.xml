@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgSketch"
+        android:layout_width="150dp"
+        android:layout_height= "100dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvNumberDrawing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18У-03.00.00.00.02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgSketch"
+        app:layout_constraintTop_toTopOf="@+id/imgSketch" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ось"
+        app:layout_constraintEnd_toStartOf="@+id/tvCount"
+        app:layout_constraintStart_toEndOf="@+id/imgSketch"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumberDrawing"
+        app:layout_constraintBottom_toTopOf="@+id/tvSteel"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumberDrawing" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/tvLengthOrThickness"
+        app:layout_constraintEnd_toStartOf="@+id/checkbox"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvNumberDrawing" />
+
+    <TextView
+        android:id="@+id/tvSteel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40X"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
+        app:layout_constraintEnd_toStartOf="@+id/tvDiameter"
+        app:layout_constraintStart_toEndOf="@+id/imgSketch"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvDiameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ø52"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
+        app:layout_constraintEnd_toStartOf="@id/tvLengthOrThickness"
+        app:layout_constraintStart_toEndOf="@+id/tvSteel"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvLengthOrThickness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L = 160"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
+        app:layout_constraintEnd_toStartOf="@id/checkbox"
+        app:layout_constraintStart_toEndOf="@+id/tvDiameter"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
