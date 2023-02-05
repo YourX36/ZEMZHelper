@@ -1,55 +1,42 @@
 package com.example.zemzhelper.model.services
 
+import com.example.zemzhelper.detailNameTMP
 import com.example.zemzhelper.model.entities.Detail
 import com.example.zemzhelper.model.entities.SteelType
 import com.example.zemzhelper.modules18
+import com.example.zemzhelper.numberDrawingTMP
+import com.example.zemzhelper.steelTMP
 import com.github.javafaker.Faker
 
-typealias DetailListener = (details: List<Detail>) -> Unit
 
 class DetailService {
     private var details = mutableListOf<Detail>()
 
-    private val listeners = mutableListOf<DetailListener>()
 
     fun getDetails(): List<Detail> = details
 
     init {
         val faker = Faker.instance()
-        val generatedDetails: List<Detail> = (1..20).map {
+        details = (1..20).map {
             Detail(
                 id = it,
                 sketch = null,
-                steel = faker.name().firstName(),
-                detailName = faker.name().lastName(),
-                numberDrawing = faker.name().name(),
-                quantityPerModule = faker.number().numberBetween(1, 4),
+                steel = steelTMP[it % steelTMP.size],
+                detailName = detailNameTMP[it % detailNameTMP.size],
+                numberDrawing = numberDrawingTMP[it % numberDrawingTMP.size],
+                count = faker.number().numberBetween(1, 4),
                 steelType = SteelType.Circle,
                 length = faker.number().numberBetween(10, 660).toDouble(),
                 diameter = faker.number().numberBetween(8, 130).toDouble(),
                 pipeDiameter = null,
+                thickness = faker.number().numberBetween(6, 40).toString(),
                 drawing = null,
                 module = modules18[it % modules18.size],
                 logisticsPoints = null
             )
-        }
+        }.toMutableList()
     }
 
-    fun addListener(listener: DetailListener) {
-        listeners.add(listener)
-        listener.invoke(details)
-    }
-    fun removeListener(listener: DetailListener) = listeners.remove(listener)
-
-    private fun notifyChanges() = listeners.forEach { it.invoke(details) }
-
-    fun deleteDetail(detail: Detail) {
-        val indexToDelete: Int = details.indexOfFirst { it.id == detail.id }
-        if (indexToDelete != -1) {
-            details.removeAt(indexToDelete)
-            notifyChanges()
-        }
-    }
 
 
 }

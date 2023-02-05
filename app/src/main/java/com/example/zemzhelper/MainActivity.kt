@@ -2,6 +2,7 @@ package com.example.zemzhelper
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.zemzhelper.ui.screens.DetailsFragment
 import com.example.zemzhelper.ui.screens.MainFragment
 
 class MainActivity : AppCompatActivity() {
@@ -10,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, MainFragment.newInstance())
+                .replace(R.id.fragment_container, DetailsFragment.newInstance())
                 .commitNow()
         }
     }

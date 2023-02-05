@@ -6,11 +6,12 @@ data class Detail(
     var steel : String,
     var detailName: String,
     var numberDrawing : String?,
-    var quantityPerModule : Int,
+    var count : Int,
     var steelType: SteelType,
     var length : Double?,
     var diameter: Double?,
     var pipeDiameter: PipeDiameter?,
+    var thickness: String,
     var drawing : String?,
     var module: Module,
     var logisticsPoints: String?
