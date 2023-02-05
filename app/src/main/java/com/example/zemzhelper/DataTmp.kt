@@ -3,69 +3,69 @@ package com.example.zemzhelper
 import com.example.zemzhelper.model.entities.Machine
 import com.example.zemzhelper.model.entities.Module
 
-val machines: List<Machine> = listOf(
-    Machine("18У"),
-    Machine("22Э"),
-    Machine("29Э"),
-    Machine("36Э"),
-    Machine("КМУ"),
-    Machine("АЛ30"),
+val machinesTMP: List<Machine> = listOf(
+    Machine("18У", machineCount = 20, machineImage = R.drawable.ic_sadko),
+    Machine("22Э", machineCount = 5, machineImage = R.drawable.ic_22),
+    Machine("29Э", machineCount = 5, machineImage = R.drawable.ic_29),
+    Machine("36Э", machineCount = 0, machineImage = R.drawable.ic_36),
+    Machine("КМУ", machineCount = 0, machineImage = R.drawable.ic_kmu),
+    Machine("АЛ30", machineCount = 0, machineImage = R.drawable.ic_al30),
 )
 
 val modules18: List<Module> = listOf(
-    Module("Газ-ON", machines[0]),
-    Module("Садко", machines[0]),
-    Module("У(СН)", machines[0]),
-    Module("600", machines[0]),
-    Module("1000", machines[0]),
-    Module("Стрела ${machines[0].machineName}", machines[0]),
-    Module("Перекатное ${machines[0].machineName}", machines[0]),
-    Module("Подвеска ${machines[0].machineName}", machines[0]),
-    Module("Люлька ${machines[0].machineName}", machines[0]),
+    Module("Газ-ON", machinesTMP[0]),
+    Module("Садко", machinesTMP[0]),
+    Module("У(СН)", machinesTMP[0]),
+    Module("600", machinesTMP[0]),
+    Module("1000", machinesTMP[0]),
+    Module("Стрела ${machinesTMP[0].machineName}", machinesTMP[0]),
+    Module("Перекатное ${machinesTMP[0].machineName}", machinesTMP[0]),
+    Module("Подвеска ${machinesTMP[0].machineName}", machinesTMP[0]),
+    Module("Люлька ${machinesTMP[0].machineName}", machinesTMP[0]),
 )
 val modules22: List<Module> = listOf(
-    Module("Газ-ON", machines[1]),
-    Module("Поворотная рама ${machines[1].machineName}", machines[1]),
-    Module("Стрела ${machines[1].machineName}", machines[1]),
-    Module("Перекатное ${machines[1].machineName}", machines[1]),
-    Module("Подвеска ${machines[1].machineName}", machines[1]),
-    Module("Люлька ${machines[1].machineName}", machines[1])
+    Module("Газ-ON", machinesTMP[1]),
+    Module("Поворотная рама ${machinesTMP[1].machineName}", machinesTMP[1]),
+    Module("Стрела ${machinesTMP[1].machineName}", machinesTMP[1]),
+    Module("Перекатное ${machinesTMP[1].machineName}", machinesTMP[1]),
+    Module("Подвеска ${machinesTMP[1].machineName}", machinesTMP[1]),
+    Module("Люлька ${machinesTMP[1].machineName}", machinesTMP[1])
 
 )
 val modules29: List<Module> = listOf(
-    Module("Газ-ON", machines[2]),
-    Module("Поворотная рама ${machines[2].machineName}", machines[2]),
-    Module("Стрела ${machines[2].machineName}", machines[2]),
-    Module("Перекатное ${machines[2].machineName}", machines[2]),
-    Module("Подвеска ${machines[2].machineName}", machines[2]),
-    Module("Люлька ${machines[2].machineName}", machines[2])
+    Module("Газ-ON", machinesTMP[2]),
+    Module("Поворотная рама ${machinesTMP[2].machineName}", machinesTMP[2]),
+    Module("Стрела ${machinesTMP[2].machineName}", machinesTMP[2]),
+    Module("Перекатное ${machinesTMP[2].machineName}", machinesTMP[2]),
+    Module("Подвеска ${machinesTMP[2].machineName}", machinesTMP[2]),
+    Module("Люлька ${machinesTMP[2].machineName}", machinesTMP[2])
 
 )
 val modules36: List<Module> = listOf(
-    Module("Газ-ON", machines[3]),
-    Module("Поворотная рама ${machines[3].machineName}", machines[3]),
-    Module("Стрела ${machines[3].machineName}", machines[3]),
-    Module("Перекатное ${machines[3].machineName}", machines[3]),
-    Module("Подвеска ${machines[3].machineName}", machines[3]),
-    Module("Люлька ${machines[3].machineName}", machines[3])
+    Module("Газ-ON", machinesTMP[3]),
+    Module("Поворотная рама ${machinesTMP[3].machineName}", machinesTMP[3]),
+    Module("Стрела ${machinesTMP[3].machineName}", machinesTMP[3]),
+    Module("Перекатное ${machinesTMP[3].machineName}", machinesTMP[3]),
+    Module("Подвеска ${machinesTMP[3].machineName}", machinesTMP[3]),
+    Module("Люлька ${machinesTMP[3].machineName}", machinesTMP[3])
 
 )
 val modulesKMU: List<Module> = listOf(
-    Module("Газ-ON", machines[4]),
-    Module("Поворотная рама ${machines[4].machineName}", machines[4]),
-    Module("Стрела ${machines[4].machineName}", machines[4]),
-    Module("Перекатное ${machines[4].machineName}", machines[4]),
-    Module("Подвеска ${machines[4].machineName}", machines[4]),
-    Module("Люлька ${machines[4].machineName}", machines[4])
+    Module("Газ-ON", machinesTMP[4]),
+    Module("Поворотная рама ${machinesTMP[4].machineName}", machinesTMP[4]),
+    Module("Стрела ${machinesTMP[4].machineName}", machinesTMP[4]),
+    Module("Перекатное ${machinesTMP[4].machineName}", machinesTMP[4]),
+    Module("Подвеска ${machinesTMP[4].machineName}", machinesTMP[4]),
+    Module("Люлька ${machinesTMP[4].machineName}", machinesTMP[4])
 
 )
 val modulesAL30: List<Module> = listOf(
-    Module("Газ-ON", machines[5]),
-    Module("Поворотная рама ${machines[5].machineName}", machines[5]),
-    Module("Стрела ${machines[5].machineName}", machines[5]),
-    Module("Перекатное ${machines[5].machineName}", machines[5]),
-    Module("Подвеска ${machines[5].machineName}", machines[5]),
-    Module("Люлька ${machines[5].machineName}", machines[5])
+    Module("Газ-ON", machinesTMP[5]),
+    Module("Поворотная рама ${machinesTMP[5].machineName}", machinesTMP[5]),
+    Module("Стрела ${machinesTMP[5].machineName}", machinesTMP[5]),
+    Module("Перекатное ${machinesTMP[5].machineName}", machinesTMP[5]),
+    Module("Подвеска ${machinesTMP[5].machineName}", machinesTMP[5]),
+    Module("Люлька ${machinesTMP[5].machineName}", machinesTMP[5])
 
 )
 

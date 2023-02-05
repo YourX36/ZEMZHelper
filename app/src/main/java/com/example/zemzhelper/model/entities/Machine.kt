@@ -1,4 +1,7 @@
 package com.example.zemzhelper.model.entities
 
-class Machine(val machineName: String) {
-}
+data class Machine(
+    var machineName: String,
+    var machineImage: Int,
+    var machineCount: Int
+    )

@@ -10,10 +10,10 @@ import com.example.zemzhelper.model.entities.Detail
 class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsViewHolder>() {
 
     var details: List<Detail> = emptyList()
-    set(newValue) {
-        field = newValue
-        notifyDataSetChanged()
-    }
+        set(newValue) {
+            field = newValue
+            notifyDataSetChanged()
+        }
 
     override fun getItemCount(): Int = details.size
 
@@ -26,7 +26,7 @@ class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsViewHolder>() 
     override fun onBindViewHolder(holder: DetailsViewHolder, position: Int) {
         val detail = details[position]
         with(holder.binding) {
-             val sketch = detail.sketch ?: R.drawable.ic_22
+            val sketch = detail.sketch ?: R.drawable.ic_160
             val diameter = detail.diameter ?: detail.pipeDiameter
             val lenghtOrThickness = detail.length ?: detail.thickness
             imgSketch.setImageResource(sketch)
