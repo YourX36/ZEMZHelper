@@ -3,7 +3,7 @@ package com.example.zemzhelper.model.services
 import com.example.zemzhelper.detailNameTMP
 import com.example.zemzhelper.model.entities.Detail
 import com.example.zemzhelper.model.entities.SteelType
-import com.example.zemzhelper.modules18
+//import com.example.zemzhelper.modules18
 import com.example.zemzhelper.numberDrawingTMP
 import com.example.zemzhelper.steelTMP
 import com.github.javafaker.Faker
@@ -15,7 +15,7 @@ class DetailService {
 
     fun getDetails(): List<Detail> = details
 
-    init {
+/*    init {
         val faker = Faker.instance()
         details = (1..20).map {
             Detail(
@@ -35,8 +35,7 @@ class DetailService {
                 logisticsPoints = null
             )
         }.toMutableList()
-    }
-
+    }*/
 
 
 }

@@ -12,7 +12,7 @@ val machinesTMP: List<Machine> = listOf(
     Machine("АЛ30", machineCount = 0, machineImage = R.drawable.ic_al30),
 )
 
-val modules18: List<Module> = listOf(
+/*val modules18: List<Module> = listOf(
     Module("Газ-ON", machinesTMP[0]),
     Module("Садко", machinesTMP[0]),
     Module("У(СН)", machinesTMP[0]),
@@ -22,17 +22,17 @@ val modules18: List<Module> = listOf(
     Module("Перекатное ${machinesTMP[0].machineName}", machinesTMP[0]),
     Module("Подвеска ${machinesTMP[0].machineName}", machinesTMP[0]),
     Module("Люлька ${machinesTMP[0].machineName}", machinesTMP[0]),
-)
+)*/
 val modules22: List<Module> = listOf(
-    Module("Газ-ON", machinesTMP[1]),
-    Module("Поворотная рама ${machinesTMP[1].machineName}", machinesTMP[1]),
-    Module("Стрела ${machinesTMP[1].machineName}", machinesTMP[1]),
-    Module("Перекатное ${machinesTMP[1].machineName}", machinesTMP[1]),
-    Module("Подвеска ${machinesTMP[1].machineName}", machinesTMP[1]),
-    Module("Люлька ${machinesTMP[1].machineName}", machinesTMP[1])
+    Module("Газ-ON", machinesTMP[1], R.drawable.ic_or_gaz_on),
+    Module("Поворотная рама ${machinesTMP[1].machineName}", machinesTMP[1], R.drawable.ic_pr_22),
+    Module("Стрела ${machinesTMP[1].machineName}", machinesTMP[1], R.drawable.ic_str_22),
+    Module("Перекатное ${machinesTMP[1].machineName}", machinesTMP[1], R.drawable.ic_perekatnoe_22),
+    Module("Подвеска ${machinesTMP[1].machineName}", machinesTMP[1], R.drawable.ic_podveska_22),
+   // Module("Люлька ${machinesTMP[1].machineName}", machinesTMP[1])
 
 )
-val modules29: List<Module> = listOf(
+/*val modules29: List<Module> = listOf(
     Module("Газ-ON", machinesTMP[2]),
     Module("Поворотная рама ${machinesTMP[2].machineName}", machinesTMP[2]),
     Module("Стрела ${machinesTMP[2].machineName}", machinesTMP[2]),
@@ -67,7 +67,7 @@ val modulesAL30: List<Module> = listOf(
     Module("Подвеска ${machinesTMP[5].machineName}", machinesTMP[5]),
     Module("Люлька ${machinesTMP[5].machineName}", machinesTMP[5])
 
-)
+)*/
 
 
 val steelTMP: List<String> = listOf<String>(

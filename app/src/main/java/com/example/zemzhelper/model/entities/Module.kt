@@ -1,4 +1,3 @@
 package com.example.zemzhelper.model.entities
 
-class Module(val moduleName: String, val machine: Machine) {
-}
+data class Module(val moduleName: String, val machine: Machine, val sketchModule: Int)
