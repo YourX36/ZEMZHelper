@@ -25,7 +25,6 @@ class MachineAdapter : RecyclerView.Adapter<MachineAdapter.MachineViewHolder>() 
     override fun onBindViewHolder(holder: MachineViewHolder, position: Int) {
         val machine = machines[position]
         with(holder.binding) {
-            imgSketchMachine.setImageResource(machine.machineImage)
             tvNameMachine.text = machine.machineName
             tvCountMachine.text = machine.machineCount.toString()
         }

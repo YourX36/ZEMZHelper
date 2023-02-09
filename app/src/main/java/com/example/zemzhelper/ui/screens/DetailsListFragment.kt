@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.zemzhelper.App
-import com.example.zemzhelper.databinding.FragmentDetailsBinding
+import com.example.zemzhelper.databinding.FragmentDetailsListBinding
 import com.example.zemzhelper.model.services.DetailService
 import com.example.zemzhelper.ui.adapters.DetailsAdapter
 
-class DetailsFragment : Fragment() {
+class DetailsListFragment : Fragment() {
 
-    private var _binding: FragmentDetailsBinding? = null
+    private var _binding: FragmentDetailsListBinding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: DetailsAdapter
 
@@ -25,7 +25,7 @@ class DetailsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentDetailsBinding.inflate(inflater, container, false)
+        _binding = FragmentDetailsListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -45,6 +45,6 @@ class DetailsFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance() = DetailsFragment()
+        fun newInstance() = DetailsListFragment()
     }
 }

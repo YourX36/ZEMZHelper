@@ -1,101 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/material_dynamic_secondary70"
+    android:padding="10dp"
+    android:orientation="vertical"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imgSketch"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_margin="30dp"
-        android:src="@drawable/ic_160"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/tvNumberDrawing"
+        android:layout_gravity="center"
+        android:id="@+id/tvNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lines="1"
-        android:ellipsize="end"
-        android:text="18У-03.00.00.00.02"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgSketch"
-        app:layout_constraintTop_toTopOf="@+id/imgSketch" />
+        tools:text="18У.01.00.00.03"
+        />
 
     <TextView
         android:id="@+id/tvName"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lines="1"
-        android:ellipsize="end"
-        android:text="Ось"
-        app:layout_constraintBottom_toTopOf="@+id/tvSteel"
-        app:layout_constraintEnd_toStartOf="@+id/tvCount"
-        app:layout_constraintStart_toEndOf="@+id/imgSketch"
-        app:layout_constraintTop_toBottomOf="@+id/tvNumberDrawing" />
+        tools:text="Ось качания"
+        />
 
-    <CheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:ellipsize="end"
-        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNumberDrawing" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:ellipsize="end"
-        android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/tvLengthOrThickness"
-        app:layout_constraintEnd_toStartOf="@+id/checkbox"
-        app:layout_constraintStart_toEndOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@id/tvNumberDrawing" />
+        <TextView
+            android:id="@+id/tvSteel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="15dp"
+            tools:text="38ХМЮА"
+            />
 
-    <TextView
-        android:id="@+id/tvSteel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:ellipsize="end"
-        android:text="40X"
-        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
-        app:layout_constraintEnd_toStartOf="@+id/tvDiameter"
-        app:layout_constraintStart_toEndOf="@+id/imgSketch"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        <TextView
+            android:id="@+id/tvDiameter"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            tools:text="Ø 75x15"
+            />
 
-    <TextView
-        android:id="@+id/tvDiameter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:ellipsize="end"
-        android:text="Ø52"
-        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
-        app:layout_constraintEnd_toStartOf="@id/tvLengthOrThickness"
-        app:layout_constraintStart_toEndOf="@+id/tvSteel"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        <TextView
+            android:id="@+id/tvLength"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="L = 577"
+            />
 
-    <TextView
-        android:id="@+id/tvLengthOrThickness"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:ellipsize="end"
-        android:text="L = 160"
-        app:layout_constraintBottom_toBottomOf="@+id/imgSketch"
-        app:layout_constraintEnd_toStartOf="@id/checkbox"
-        app:layout_constraintStart_toEndOf="@+id/tvDiameter"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+    </LinearLayout>
 
-    <androidx.constraintlayout.widget.Barrier
+
+
+<!--    <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -106,6 +70,6 @@
     <Space
         android:layout_width="wrap_content"
         android:layout_height="6dp"
-        app:layout_constraintTop_toBottomOf="@+id/barrier" />
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.zemzhelper.R
 import com.example.zemzhelper.databinding.ItemDetailBinding
-import com.example.zemzhelper.model.entities.Detail
+import com.example.zemzhelper.model.details.Details
 
 class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsViewHolder>() {
 
-    var details: List<Detail> = emptyList()
+    var details: List<Details> = emptyList()
         set(newValue) {
             field = newValue
             notifyDataSetChanged()
@@ -26,16 +26,11 @@ class DetailsAdapter : RecyclerView.Adapter<DetailsAdapter.DetailsViewHolder>() 
     override fun onBindViewHolder(holder: DetailsViewHolder, position: Int) {
         val detail = details[position]
         with(holder.binding) {
-            val sketch = detail.sketch ?: R.drawable.ic_160
-            val diameter = detail.diameter ?: detail.pipeDiameter
-            val lenghtOrThickness = detail.length ?: detail.thickness
-            imgSketch.setImageResource(sketch)
-            tvNumberDrawing.text = detail.numberDrawing
-            tvName.text = detail.detailName
-            tvCount.text = detail.count.toString()
-            tvSteel.text = detail.steel
-            tvDiameter.text = diameter.toString()
-            tvLengthOrThickness.text = lenghtOrThickness.toString()
+            tvNumber.text = detail.number()
+            tvName.text = detail.name()
+            tvSteel.text = detail.steel()
+            tvDiameter.text = detail.diameter()
+            tvLength.text = detail.length()
         }
     }
 

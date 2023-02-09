@@ -2,8 +2,6 @@ package com.example.zemzhelper
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.zemzhelper.ui.screens.DetailsFragment
-import com.example.zemzhelper.ui.screens.MainFragment
 import com.example.zemzhelper.ui.screens.ModulesFragment
 
 class MainActivity : AppCompatActivity() {

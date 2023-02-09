@@ -21,9 +21,8 @@ class ModulesAdapter: RecyclerView.Adapter<ModulesAdapter.ModulesViewHolder>() {
     override fun onBindViewHolder(holder: ModulesViewHolder, position: Int) {
         val module = modules[position]
         with(holder.binding) {
-            imgSketchModule.setImageResource(module.sketchModule)
             tvModuleName.text = module.moduleName
-            tvNameMachine.text = module.machine.machineName
+            tvNameMachine.text = module.moduleMachine.machineName
         }
     }
 
